@@ -37,39 +37,39 @@ var  userPoints = 0;
 
   function calculate(location, time) {
     if (location === "Khayelitsha" && time === "offPeak") {
-      if (points >= 40) {
+      if (userPoints >= 40) {
         pricePerTripOffPeak = 40;
-        singleTripOffPeak = points / pricePerTripOffPeak;
+        singleTripOffPeak = userPoints / pricePerTripOffPeak;
       }
       return false;
     } else if (location === "Khayelitsha" && time === "Peak") {
-      if (points >= 50) {
+      if (userPoints >= 50) {
         pricePerTripPeak = (40 * 25) / 100 + 40;
-        singleTripPeak = points / pricePerTripPeak;
+        singleTripPeak = userPoints / pricePerTripPeak;
       }
-      return false;
+      return "false";
     } else if (location === "Dunoon" && time === "offPeak") {
-      if (points >= 25) {
+      if (userPoints >= 25) {
         pricePerTripOffPeak = 25;
-        singleTripOffPeak = points / pricePerTripOffPeak;
+        singleTripOffPeak = userPoints / pricePerTripOffPeak;
       }
       return false;
     } else if (location === "Dunoon" && time === "Peak") {
-      if (points >= 31.25) {
+      if (userPoints >= 31.25) {
         pricePerTripPeak = (25 * 25 / 100 )+ 25;
-        singleTripPeak = points / pricePerTripPeak;
+        singleTripPeak = userPoints / pricePerTripPeak;
       }
       return false;
     } else if (location === "Mitchells plain" && time === "offPeak") {
-      if (points >= 30) {
+      if (userPoints >= 30) {
         pricePerTripOffPeak = 30;
-        singleTripOffPeak = points / pricePerTripOffPeak;
+        singleTripOffPeak = userPoints / pricePerTripOffPeak;
       }
       return false;
     } else if (location === "Mitchells plain" && time === "Peak") {
-      if (points >= 37.5) {
+      if (userPoints >= 37.5) {
         pricePerTripPeak = (30 * 25 / 100) + 30;
-        singleTripPeak = points / pricePerTripPeak;
+        singleTripPeak = userPoints / pricePerTripPeak;
       }
       return false;
 
@@ -78,10 +78,10 @@ var  userPoints = 0;
 
   }
   function getPeakTrips() {
-    return singleTripPeak;
+    return Math.trunc(singleTripPeak);
   }
   function getOffPeakTrips() {
-    return singleTripOffPeak;
+    return Math.trunc(singleTripOffPeak);
   }
 
   function getPeakPrice() {
@@ -102,6 +102,7 @@ var  userPoints = 0;
     getOffPeakTrips,
     getPeakPrice,
     getOffPeakTrips,
-    
+    getOffPeakPrice,
+
   };
 }

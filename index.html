@@ -5,10 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/simple-grid.css">
-    <link rel="stylesheet" href="/css/simple-grid.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
+    <h1> Bus Travel Widget </h1>
+    <div class="row">
+        <div class="col-6 col-6-sm">
+            <label for="costPrice">Points:</label>
+        </div>
+        <div class="col-6 col-6-sm">
+            <input type="number" id ="numPoints" class="col-12 col-12-sm" value="" placeholder="Enter Points">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 col-6-sm">
+            <label for="start">Start location</label>
+        </div>
+        <div class="col-6 col-6-sm">
+            <input type="text" id="start" class="col-12 col-12-sm" value="" placeholder="Select start location">
+        </div>
+    </div>
+    <div class="col-6 col-6-sm">
+        <h3> Travel Times</h3>
+    </div>
+    <div class="row">
+        <div class="col-6 col-6-sm">
+            <input type="radio" name="timetype" class="timeType" value="Peak">
+            <span class="time">Peak</span>
+        </div>
+        <div class="col-6 col-6-sm">
+            <input type="radio" name="return" class="tripType" value="return">
+            <span class="Return">Return Trip</span>
+        </div>
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-6 col-6-sm">
+            <input type="radio" name="timetype" class="timeType" value="offPeak">
+            <span class="time"> Off Peak</span>
+        </div>
+        <div class="col-6 col-6-sm">
+            <button> Calculate </button>
+        </div>
+        
+
+    </div>
+    <div class="rom">
+        <h1>
+            Calculations 
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-6 col-6-sm">
+            <label>Number of Single Trips</label>
+        </div>
+        <div class="col-6 col-6-sm">
+            <span aria-placeholder="Display number of trips"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-6-sm">
+            <label>Price per trip(single):</label>
+        </div>
+        <div class="col-6 col-6-sm">
+            <span aria-placeholder="Display the price per trip"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-6-sm">
+            <label>Number of return Trips:</label>
+        </div>
+        <div class="col-6 col-6-sm">
+            <span aria-placeholder="Dislay number of return trips"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-6-sm">
+            <label>Price Per trip (return):</label>
+        </div>
+        <div class="col-6 col-6-sm">
+            <span aria-placeholder="Display the price per Trip"></span>
+        </div>
+    </div>
+
+    
+
     
 </body>
 </html>

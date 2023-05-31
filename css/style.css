@@ -1,0 +1,9 @@
+body{
+    background-color: #9998d2;
+}
+span{
+    display: inline-block;
+  width: 50%;
+  border: 8px;
+  background-color: darkgrey;
+}
