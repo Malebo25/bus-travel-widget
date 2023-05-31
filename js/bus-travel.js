@@ -90,6 +90,17 @@ var  userPoints = 0;
   function getOffPeakPrice() {
     return pricePerTripOffPeak;
   }
+  function returnticket (time){
+    if (time === "Peak") {
+      
+      singleTripPeak = (userPoints / pricePerTripPeak) / 2;
+      pricePerTripPeak = pricePerTripOffPeak * 2;
+    }
+    if (time === "offPeak") {
+      singleTripOffPeak = singleTripOffPeak / 2;
+      singleTripPeak = pricePerTripOffPeak * 2;
+    }
+  }
 
 
 
@@ -103,6 +114,7 @@ var  userPoints = 0;
     getPeakPrice,
     getOffPeakTrips,
     getOffPeakPrice,
+    returnticket,
 
   };
 }
