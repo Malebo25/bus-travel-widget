@@ -10,6 +10,8 @@ const priceSingle = document.querySelector(".priceTrip");
 const myUser = busTravel();
 
 calculateBtn.addEventListener("click", function () { 
+    myUser.setPoints(numberOfPoints.value);
+    myUser.getPoints();
     var checkedLocation = document.querySelector(
       "input[name='location']:checked"
     );
@@ -17,16 +19,16 @@ calculateBtn.addEventListener("click", function () {
     
     var checkedTime = document.querySelector("input[name='timetype']:checked");
     let selectedTime = checkedTime.value;
-    
     myUser.calculate(selectedLocation, selectedTime);
     if (selectedTime === "Peak") {
         
         singleTrip.innerHTML = myUser.getPeakTrips();
+
         priceSingle.innerHTML = myUser.getPeakPrice();
     }
     else if (selectedTime === "offPeak") {
-        singleTrip.innerHTML = myUser.getOffPeakTrips;
-        priceSingle.innerHTML = myUser.getOffPeakTrips;
+        singleTrip.innerHTML = myUser.getOffPeakTrips();
+        priceSingle.innerHTML = myUser.getOffPeakPrice();
         
     }
         
